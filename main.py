@@ -3,6 +3,7 @@ from pyngrok import ngrok
 
 from config import Config
 from models import Update
+from openai_helper import OpenAiHelper
 from telegram_bot import TelegramBot
 
 app = Flask(__name__)
@@ -13,7 +14,7 @@ def handle_webhook():
     update = Update(**request.json)
     chat_id = update.message.chat.id
 
-    response = f"This is a response for message: {update.message.text}"
+    response = app.openai_helper.get_response(update.message.text)
     app.bot.send_message(chat_id, response)
 
     return "OK", 200
@@ -28,6 +29,7 @@ def main():
     app.bot = TelegramBot(Config.TELEGRAM_TOKEN)
     host = run_ngrok(Config.PORT)
     app.bot.set_webhook(host)
+    app.openai_helper = OpenAiHelper(Config.OPENAI_TOKEN)
     app.run(port=Config.PORT, debug=True, use_reloader=False)
 
 
