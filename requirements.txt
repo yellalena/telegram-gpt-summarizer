@@ -2,3 +2,5 @@ Flask==2.2.3
 pydantic==1.10.7
 requests==2.28.2
 pyngrok==5.2.1
+quart==0.18.3
+telethon==1.27.0
