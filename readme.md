@@ -2,7 +2,8 @@
 
 This application was created along with an article: (link here)
 To learn more about developing web applications with Flask, check Hyperskill’s [Flask track](https://hyperskill.org/tracks/29).
-###Getting started
+
+### Getting started
 * install requirements
 ```
 $ pip install -r requirements.txt
