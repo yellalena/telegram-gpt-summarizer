@@ -1,6 +1,6 @@
 ## A simple telegram bot with openAI integration. Made with python and Flask(Quart).
 
-This application was created along with an article: (link here)
+This application was created along with an article: https://medium.com/hyperskill/telegram-conversation-summarizer-bot-with-chatgpt-and-flask-quart-bb2e19884c
 To learn more about developing web applications with Flask, check Hyperskill’s [Flask track](https://hyperskill.org/tracks/29).
 
 ### Getting started
